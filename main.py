@@ -50,7 +50,7 @@ def main():
         vy = np.float64(planet['vy'])
         vz = np.float64(planet['vz'])
         planets.append(Particle3D(np.array([x, y, z]), np.array([vx, vy, vz]), masses[i+1], i+1))
-    # creates empty lists for use of visulisation
+    # creates empty lists for use of visualisation
     mercury_pos, venus_pos, earth_pos, mars_pos, mars_x, mars_y, sun_pos = [], [], [], [], [], [], []
     mercury_pos_y, venus_pos_y, earth_pos_y, sun_pos_y = [], [], [], []
     # begins simualtion loop
