@@ -70,14 +70,14 @@ def main():
         planets.append(Particle3D(np.array([x, y, z]), np.array([vx, vy, vz]), masses[i+1], i+1))
     # creates empty lists for use of visualisation
 
-    planet_coords["Mercury"].append(np.array(planets[1].position[0], planets[1].position[1]))
-    planet_coords["Venus"].append(np.array(planets[2].position[0], planets[2].position[1]))
-    planet_coords["Earth"].append(np.array(planets[3].position[0], planets[3].position[1]))
-    planet_coords["Mars"].append(np.array(planets[4].position[0], planets[4].position[1]))
-    planet_coords["Jupiter"].append(np.array(planets[5].position[0], planets[5].position[1]))
-    planet_coords["Saturn"].append(np.array(planets[6].position[0], planets[6].position[1]))
-    planet_coords["Uranus"].append(np.array(planets[6].position[0], planets[6].position[1]))
-    planet_coords["Neptune"].append(np.array(planets[8].position[0], planets[8].position[1]))
+    inner_planet_coords["Mercury"].append(np.array(planets[1].position[0], planets[1].position[1]))
+    inner_planet_coords["Venus"].append(np.array(planets[2].position[0], planets[2].position[1]))
+    inner_planet_coords["Earth"].append(np.array(planets[3].position[0], planets[3].position[1]))
+    inner_planet_coords["Mars"].append(np.array(planets[4].position[0], planets[4].position[1]))
+    outer_planet_coords["Jupiter"].append(np.array(planets[5].position[0], planets[5].position[1]))
+    outer_planet_coords["Saturn"].append(np.array(planets[6].position[0], planets[6].position[1]))
+    outer_planet_coords["Uranus"].append(np.array(planets[6].position[0], planets[6].position[1]))
+    outer_planet_coords["Neptune"].append(np.array(planets[8].position[0], planets[8].position[1]))
 
     # begins simulation loop
     for i in range(numstep):
@@ -108,7 +108,7 @@ def main():
             outer_planet_coords["Jupiter"].append(np.array(planets[5].position[0], planets[5].position[1]))
             outer_planet_coords["Saturn"].append(np.array(planets[6].position[0], planets[6].position[1]))
             outer_planet_coords["Uranus"].append(np.array(planets[6].position[0], planets[6].position[1]))
-            outerplanet_coords["Neptune"].append(np.array(planets[8].position[0], planets[8].position[1]))
+            outer_planet_coords["Neptune"].append(np.array(planets[8].position[0], planets[8].position[1]))
 
     plot_planets(inner_planet_coords, "Mars")
     plot_planets(outer_planet_coords, "Neptune")
