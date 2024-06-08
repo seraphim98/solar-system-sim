@@ -89,6 +89,7 @@ def main():
             os.system('cls')
             print(str(round(i*100/numstep, 1)) + " %")
         # calculates the force on each planet due to the Sun
+        force_array = np.zeros([len(planets), len(planets), 3])
         for j in range(len(planets)):
             for k in range(j+1, len(planets)):
                 force = force_calc(planets[j], planets[k], g, False)
